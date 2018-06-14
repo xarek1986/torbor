@@ -6,16 +6,20 @@
 
 Минимально неоюходимое программное обеспечение для запуска данного проекта:
 
-OS | UBUNTU Xenial and higher, Fedora 26 and higher
-Arch | X86_64 (amd64)
-docker | 1.13.1
-docker-compose | 1.8.0
+| Type | Descriptions |
+|-|-|
+| OS | UBUNTU Xenial and higher or Fedora 26 and higher |
+| Arch | X86_64 (amd64) |
+| docker | 1.13.1 |
+| docker-compose | 1.8.0 |
 
 # Descriprion
 
 Данный проект представляет из себя скрипт автоматического запуска двух среды состоящей из двух контейнеров и имеющих следующие свойства:
 
 ## Сервис 1, mysql
+| Type | Name |
+|-|-|
 Имя сервисв | db
 Имя контейнера | tb-db
 
@@ -31,6 +35,8 @@ docker-compose | 1.8.0
 По окончанию инициализации сервиса, база станет доступна на локальном интерфейсе со стондартным портом (**127.0.0.1:3306**)
 
 ## Сервис 2, elasticsearch
+| Type | Name |
+|-|-|
 Имя сервиса | els
 Имя контейнера | tb-els
 
