@@ -1,0 +1,19 @@
+version: "2"
+services:
+  db:
+    build: ./mysql
+    container_name: tb-db
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+    ports:
+      - "127.0.0.1:3306:3306"
+    command: "--default_authentication_plugin=mysql_native_password"
+  els:
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
+    container_name: tb-els
+    environment:
+      cluster.name: "torbor-exam"
+      discovery.type: "single-node"
+    ports:
+      - "127.0.0.1:9200:9200"
+      - "127.0.0.1:9300:9300"
